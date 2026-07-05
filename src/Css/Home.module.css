@@ -1,0 +1,173 @@
+:global(:root) {
+  --color-page: rgb(239 239 239);
+  --color-dark: rgb(10 17 12);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-accent: rgb(252 237 31);
+  --color-surface: rgb(224 224 224);
+  --color-footer: rgb(165 163 163);
+  --color-teal: rgb(79 165 187);
+
+  --radius: 16px;
+  --radius-lg: 25px;
+  --transition: 200ms ease;
+}
+
+.Head {
+  color: aqua;
+}
+
+/* ---- Navbar: flexbox instead of floated children ---- */
+.Navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 70px;
+  padding-inline: 1rem;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  transition: background-color var(--transition);
+}
+.Navbar:hover {
+  background-color: var(--color-black);
+}
+.Nav {
+  margin: 0;
+  color: var(--color-white);
+}
+/* Pushes the Home button + the buttons after it to the right edge */
+.nav1 {
+  margin-inline-start: auto;
+}
+
+/* ---- Hero row ---- */
+.dash {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 4rem);
+  width: 100%;
+  min-height: 600px;
+}
+.hat {
+  flex: 1 1 300px;
+}
+.locate {
+  width: min(400px, 100%);
+  min-height: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+/* ---- "Why choose us" band ---- */
+.hx {
+  text-align: center;
+  padding-block: 0.5rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* ---- Testimonials: wrapping flex row + gap instead of floats ---- */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  margin-block-start: 10px;
+  padding: 50px;
+  background-color: var(--color-surface);
+}
+.heading {
+  flex-basis: 100%;
+  max-width: 1250px;
+  margin-inline: auto;
+  text-align: center;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.box,
+.box1 {
+  width: 300px;
+  min-height: 480px;
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+}
+.im {
+  margin-block-start: 30px;
+  border-radius: 50%;
+}
+/* id kept (JSX uses id={styles.hov}); classes are generally preferred */
+#hov:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* ---- Footer ---- */
+.foot {
+  width: 100%;
+  min-height: 270px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-footer);
+}
+.hea {
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
+}
+.contact {
+  line-height: 2;
+}
+
+/* ---- Product list (Allproduct) ---- */
+/* .zacs was referenced in JSX but never defined — added here */
+.zacs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+.dhg {
+  /* centering now handled by .zacs; magic margin-left removed */
+  width: min(650px, 100%);
+}
+
+/* ---- Product booking panel ---- */
+.mand {
+  width: min(60%, 500px);
+  min-height: 500px;
+  margin-block-start: 100px;
+  padding: 60px;
+  background-color: var(--color-accent);
+}
+
+/* ---- Generic full-height wrapper ---- */
+.pad {
+  width: 100%;
+  min-height: 700px;
+}
+
+/* ---- Reusable button (defined but currently unused in JSX) ---- */
+.but {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--color-black);
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-teal);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: filter var(--transition);
+}
+.but:hover {
+  filter: brightness(0.92);
+}

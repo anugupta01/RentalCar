@@ -1,0 +1,5 @@
+:global(body) {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-page, rgb(239 239 239));
+}
