@@ -50,4 +50,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### `Deployement` 
 
-deployement tool used: https://www.netlify.com/
+deployement tool used: https://www.vercel.com/
