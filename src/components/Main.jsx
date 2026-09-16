@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { data } from './data/data';
 import Home from './Home';
 import AllProduct from './Allproduct';
@@ -41,21 +41,17 @@ const Main = () => {
         </div>
       </div>
 
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route
-          path="/allproduct"
-          exact
-          render={(props) => <AllProduct {...props} data={data} />}
-        />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/allproduct" element={<AllProduct data={data} />} />
         <Route
           path="/allproduct/:carName"
-          render={(props) => <Product {...props} data={data} />}
+          element={<Product data={data} />}
         />
-        <Route path="/booked" component={Booked} />
-        <Route path="/aboutus" component={About} />
-        <Route path="/contactus" component={Contact} />
-      </Switch>
+        <Route path="/booked" element={<Booked />} />
+        <Route path="/aboutus" element={<About />} />
+        <Route path="/contactus" element={<Contact />} />
+      </Routes>
     </>
   );
 };
